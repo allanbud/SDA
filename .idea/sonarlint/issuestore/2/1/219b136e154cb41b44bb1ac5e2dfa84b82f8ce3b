@@ -1,0 +1,57 @@
+
+
+java:S1192ˆ"cDefine a constant instead of duplicating this literal "_________________________________" 10 times.(»àİÜûÿÿÿÿ
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ñ—
+f	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓËÎı
+f	java:S117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í‹¬
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶¬ˆ—ıÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åŒêöıÿÿÿÿ
+S
+java:S1197"8Move the array designator from the variable to the type.(ÎÁÄªúÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(„Ã”Äüÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„š£ıüÿÿÿÿ
+N
+java:S1197"8Move the array designator from the variable to the type.(ë¾ÖÏ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ã˜¡¼ÿÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÑ„ûÿÿÿÿ
+S
+java:S1197"8Move the array designator from the variable to the type.(ÎÁÄªúÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÿÑğ
+S	java:S106 "9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
+h	java:S100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ÛÃ•şÿÿÿÿ
+<
+java:S1659&"&Declare "minValue" on a separate line.(áÅ€©
+S
+java:S1197$"8Move the array designator from the variable to the type.(ÎÁÄªúÿÿÿÿ
+S	java:S106/"9Replace this use of System.out or System.err by a logger.(äŠåÁüÿÿÿÿ
+h	java:S1002"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€Ñ¯şÿÿÿÿ
+<
+java:S16594"&Declare "NewArray" on a separate line.(ÓËÎı
+S	java:S106;"9Replace this use of System.out or System.err by a logger.(Ò¤Âùÿÿÿÿ
+h	java:S100>"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ë×‚ıÿÿÿÿ
+M	java:S106F"9Replace this use of System.out or System.err by a logger.(¡ë’f
+c	java:S100I"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²Äöí
+<
+java:S1659K"&Declare "NewArray" on a separate line.(Í‹¬
+7
+java:S1659M"!Declare "pos" on a separate line.(íµêë
+=
+java:S1659N""Declare "newV" on a separate line.(ßØ„ûÿÿÿÿ
+S	java:S106X"9Replace this use of System.out or System.err by a logger.(…åØ øÿÿÿÿ
+h	java:S100["NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ããÉÿÿÿÿÿ
+S	java:S106d"9Replace this use of System.out or System.err by a logger.(Ÿï£‹ÿÿÿÿÿ
+c	java:S100j"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜€™Ã
+N	java:S106n"9Replace this use of System.out or System.err by a logger.(Ö¦ºÉ
+S	java:S106o"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
+h	java:S100s"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±¥Âºÿÿÿÿÿ
+S	java:S106|"9Replace this use of System.out or System.err by a logger.(ªšãæşÿÿÿÿ
+T	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(»àİÜûÿÿÿÿ
+T	java:S106Š"9Replace this use of System.out or System.err by a logger.(»àİÜûÿÿÿÿ
+T	java:S106Œ"9Replace this use of System.out or System.err by a logger.(»àİÜûÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(»àİÜûÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(»àİÜûÿÿÿÿ
+T	java:S106’"9Replace this use of System.out or System.err by a logger.(»àİÜûÿÿÿÿ
+T	java:S106”"9Replace this use of System.out or System.err by a logger.(»àİÜûÿÿÿÿ
+T	java:S106–"9Replace this use of System.out or System.err by a logger.(»àİÜûÿÿÿÿ
+T	java:S106˜"9Replace this use of System.out or System.err by a logger.(»àİÜûÿÿÿÿ
+T	java:S106š"9Replace this use of System.out or System.err by a logger.(»àİÜûÿÿÿÿ
