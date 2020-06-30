@@ -3,7 +3,7 @@ import java.util.Stack;
 
 public class PostFix {
 
-    static boolean pass, zero;
+    private static boolean pass, zero;
 
     private static Scanner in = new Scanner(System.in);
 
@@ -29,6 +29,10 @@ public class PostFix {
         String[] strings = str.split(" ");
 
         Stack<Double> stack = new Stack<Double>();
+
+// string inversion for converting prefix to postfix goes here
+
+
 
         for (int i = 0; i < strings.length; i++){
 //push string number to stack
@@ -104,6 +108,7 @@ public class PostFix {
         } else {
             System.out.print(Color.RED_BOLD);
             System.out.println("Error! Please check if you have entered correct operator and spaces in between");
+            System.out.println("Use dot as decimal separator");
             System.out.print(Color.RESET);
         }
     }
