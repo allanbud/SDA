@@ -3,6 +3,8 @@ import java.util.Stack;
 
 public class PostFix {
 
+    static boolean zero;
+
     private static Scanner in = new Scanner(System.in);
 
     private static boolean isNumber(String string)  {
@@ -32,49 +34,60 @@ public class PostFix {
             if (isNumber(strings[i])){
                 stack.push(Double.parseDouble(strings[i]));
             }
-            else{
+            else {
 //if string is not number create new double from top of stack
-                double tmp1 = stack.pop();
+                if (stack.size() >= 2) {
+                    double tmp1 = stack.pop();
 // second double takes next from stack (now its first after previos operation)
 // two elements from top of stack converted to two double vars
-                double tmp2 = stack.pop();
 
-                switch (strings[i]){
+                    double tmp2 = stack.pop();
+
+                    switch (strings[i]) {
 // replace two elements from top of stack with calculation
-                    case "+":
+                        case "+":
 
-                        stack.push(tmp1 + tmp2);
+                            stack.push(tmp1 + tmp2);
 
-                        break;
+                            break;
 
-                    case "-":
+                        case "-":
 //tmp2 goes first because it was taken from stack after tmp1
-                        stack.push(tmp2 - tmp1);
+                            stack.push(tmp2 - tmp1);
 
-                        break;
+                            break;
 
-                    case "*":
+                        case "*":
 
-                        stack.push(tmp1 * tmp2);
+                            stack.push(tmp1 * tmp2);
 
-                        break;
+                            break;
 
-                    case "/":
-
-                        stack.push(tmp2 / tmp1);
-
-                        break;
+                        case "/":
+                            try {
+                                double div = (tmp2 / tmp1);
+                                stack.push(div);
+                                if (div == Double.POSITIVE_INFINITY ||
+                                        div == Double.NEGATIVE_INFINITY) {
+                                    throw new ArithmeticException();
+                                }
+                            } catch (ArithmeticException ae) {
+                                zero = true;
+                                System.out.println("ArithmeticException occured, div by zero!");
+                            }
+                            break;
+                    }
                 }
             }
         }
 
-        if (!stack.empty()) {
+        if (stack.size() == 1 && !zero ) {
 
             System.out.println(stack.pop());
 
         } else {
 
-            System.out.println("Error");
+            System.out.println("Error! Please check if you have entered correct operator");
         }
     }
 }
