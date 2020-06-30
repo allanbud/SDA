@@ -22,6 +22,7 @@ public class PostFix {
 
     public static void main(String[] args){
 
+        System.out.println("please enter what you need to enter");
         String str = in.nextLine();
 
 // strings split by spaces
@@ -73,7 +74,9 @@ public class PostFix {
                                 }
                             } catch (ArithmeticException ae) {
                                 zero = true;
+                                System.out.print(Color.RED_BOLD_BRIGHT);
                                 System.out.println("ArithmeticException occured, div by zero!");
+                                System.out.print(Color.RESET);
                             }
                             break;
 
