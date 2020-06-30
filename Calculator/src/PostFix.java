@@ -3,7 +3,7 @@ import java.util.Stack;
 
 public class PostFix {
 
-    static boolean zero;
+    static boolean pass, zero;
 
     private static Scanner in = new Scanner(System.in);
 
@@ -36,6 +36,7 @@ public class PostFix {
             }
             else {
                 if (stack.size() >= 2 && strings.length % 2 != 0) {
+                    pass = true;
                     double tmp1 = stack.pop();
 // second double takes next from stack (now its first after previos operation)
 // two elements from top of stack converted to two double vars
@@ -78,7 +79,7 @@ public class PostFix {
 
                         default:
 // clear stack will result an error
-// loop end
+// break loop
                         {
                             stack.clear();
                             i = strings.length;
@@ -89,13 +90,18 @@ public class PostFix {
             }
         }
 
-        if (stack.size() == 1 && !zero ) {
+        if (stack.size() == 1 && !zero && pass) {
 
+
+            System.out.print(Color.BLACK);
+            System.out.print(Color.GREEN_BACKGROUND);
             System.out.println(stack.pop());
+            System.out.print(Color.RESET);
 
         } else {
-
-            System.out.println("Error! Please check if you have entered correct operator");
+            System.out.print(Color.RED_BOLD);
+            System.out.println("Error! Please check if you have entered correct operator and spaces in between");
+            System.out.print(Color.RESET);
         }
     }
 }
