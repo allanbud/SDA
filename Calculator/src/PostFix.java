@@ -35,8 +35,7 @@ public class PostFix {
                 stack.push(Double.parseDouble(strings[i]));
             }
             else {
-//if string is not number create new double from top of stack
-                if (stack.size() >= 2) {
+                if (stack.size() >= 2 && strings.length % 2 != 0) {
                     double tmp1 = stack.pop();
 // second double takes next from stack (now its first after previos operation)
 // two elements from top of stack converted to two double vars
@@ -76,6 +75,15 @@ public class PostFix {
                                 System.out.println("ArithmeticException occured, div by zero!");
                             }
                             break;
+
+                        default:
+// clear stack will result an error
+// loop end
+                        {
+                            stack.clear();
+                            i = strings.length;
+                        }
+
                     }
                 }
             }
