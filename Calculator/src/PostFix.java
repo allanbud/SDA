@@ -3,7 +3,7 @@ import java.util.Stack;
 
 public class PostFix {
 
-    private static boolean pass, zero;
+    private static boolean pass, zero, prefix;
 
     private static Scanner in = new Scanner(System.in);
 
@@ -20,17 +20,54 @@ public class PostFix {
 
     }
 
+    private static String[] reverseStr(String[] string){
+        int i = 0;
+        int n = 0;
+        int len = string.length - 1;
+        String[] dest = new String[len+1];
+
+        for (int t = 0; t == len; t++){
+            dest[t] = string[t];
+        }
+
+
+
+        while (!isNumber(string[i])) {
+            dest[len] = string[i];
+            len--;
+            i++;
+        }
+
+        for (int j = i; j <= 6; j++){
+            dest[n] = string[j];
+            n++;
+        }
+
+        return dest;
+    }
+
+
     public static void main(String[] args){
+
+
+        System.out.println("post or pref?");
+        String menu = in.nextLine();
+        if (menu.equals("post")) {
+            prefix = true;
+        }
 
         System.out.println("please enter what you need to enter");
         String str = in.nextLine();
 
+
 // strings split by spaces
         String[] strings = str.split(" ");
 
-        Stack<Double> stack = new Stack<Double>();
+        if (!prefix) {
+            strings = reverseStr(strings);
+        }
 
-// string inversion for converting prefix to postfix goes here
+        Stack<Double> stack = new Stack<Double>();
 
 
 

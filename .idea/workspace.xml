@@ -13,25 +13,26 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:github/test" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="451c8908-aa9c-419a-826d-e77de92dd670" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Jun14/Flags.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Jun14/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../June13/src/ExercisesEncapsulation/Dog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../June13/src/ExercisesEncapsulation/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../June13/src/ExercisesEncapsulation/Pocket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/25324fa4d154f9b798c7c2bc700b311013b53dff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SDA/allan/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Exercises" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="e7ed80e5-cb54-4b7c-885e-6b77ddce0346" />
   </component>
   <component name="ProjectId" id="1dJDmPdFwOk0xVScpy0vxaqEKkB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -51,9 +56,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.33793104" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
@@ -74,6 +86,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -86,7 +103,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="github/test" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -97,19 +114,41 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Paths">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="dir:C:/JAVA Projects/SDA" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="dir:C:/JAVA Projects/SDA" />
+                  <option value="dir:C:/JAVA Projects/SDA/Exercises" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
-      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/.." />
+      <path value="$PROJECT_DIR$/Exercises" />
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="2095" y="253" key="FileChooserDialogImpl" timestamp="1592135013998">
+    <state x="2095" y="253" key="FileChooserDialogImpl" timestamp="1592137427868">
       <screen x="1366" y="0" width="1920" height="1050" />
     </state>
-    <state x="2095" y="253" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1920.1050@1366.0.1920.1050" timestamp="1592135013998" />
+    <state x="2095" y="253" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1920.1050@1366.0.1920.1050" timestamp="1592137427868" />
     <state x="2204" y="423" key="Github.ShareDialog" timestamp="1592135189431">
       <screen x="1366" y="0" width="1920" height="1050" />
     </state>
@@ -118,9 +157,37 @@
       <screen x="1366" y="0" width="1920" height="1050" />
     </state>
     <state x="2176" y="223" key="Github.UntrackedFilesDialog/0.0.1366.738/1366.0.1920.1050@1366.0.1920.1050" timestamp="1592135211070" />
-    <state x="1922" y="270" key="SettingsEditor" timestamp="1592134624454">
+    <state width="1899" height="285" key="GridCell.Tab.0.bottom" timestamp="1592137481337">
       <screen x="1366" y="0" width="1920" height="1050" />
     </state>
-    <state x="1922" y="270" key="SettingsEditor/0.0.1366.738/1366.0.1920.1050@1366.0.1920.1050" timestamp="1592134624454" />
+    <state width="1899" height="285" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.0.1920.1050@1366.0.1920.1050" timestamp="1592137481337" />
+    <state width="1899" height="285" key="GridCell.Tab.0.center" timestamp="1592137481337">
+      <screen x="1366" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="285" key="GridCell.Tab.0.center/0.0.1366.738/1366.0.1920.1050@1366.0.1920.1050" timestamp="1592137481337" />
+    <state width="1899" height="285" key="GridCell.Tab.0.left" timestamp="1592137481337">
+      <screen x="1366" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="285" key="GridCell.Tab.0.left/0.0.1366.738/1366.0.1920.1050@1366.0.1920.1050" timestamp="1592137481337" />
+    <state width="1899" height="285" key="GridCell.Tab.0.right" timestamp="1592137481337">
+      <screen x="1366" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="285" key="GridCell.Tab.0.right/0.0.1366.738/1366.0.1920.1050@1366.0.1920.1050" timestamp="1592137481337" />
+    <state x="1840" y="156" key="SettingsEditor" timestamp="1592137163064">
+      <screen x="1366" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1840" y="156" key="SettingsEditor/0.0.1366.738/1366.0.1920.1050@1366.0.1920.1050" timestamp="1592137163064" />
+    <state x="2064" y="473" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1592137156236">
+      <screen x="1366" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2064" y="473" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.738/1366.0.1920.1050@1366.0.1920.1050" timestamp="1592137156236" />
+    <state x="2127" y="397" key="git4idea.history.wholeTree.VcsStructureChooser" timestamp="1592136909791">
+      <screen x="1366" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2127" y="397" key="git4idea.history.wholeTree.VcsStructureChooser/0.0.1366.738/1366.0.1920.1050@1366.0.1920.1050" timestamp="1592136909791" />
+    <state x="1986" y="145" key="new project wizard" timestamp="1592137473994">
+      <screen x="1366" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1986" y="145" key="new project wizard/0.0.1366.738/1366.0.1920.1050@1366.0.1920.1050" timestamp="1592137473994" />
   </component>
 </project>
