@@ -19,18 +19,16 @@ public class PostFix {
         }
 
     }
-
+// converts prefix to postfix
     private static String[] reverseStr(String[] string){
         int i = 0;
         int n = 0;
         int len = string.length - 1;
         String[] dest = new String[len+1];
-
+//put operators from prefix to postfix
         for (int t = 0; t == len; t++){
             dest[t] = string[t];
         }
-
-
 
         while (!isNumber(string[i])) {
             dest[len] = string[i];
@@ -38,7 +36,7 @@ public class PostFix {
             i++;
         }
 
-        for (int j = i; j <= 6; j++){
+        for (int j = i; j <= len + i; j++){
             dest[n] = string[j];
             n++;
         }
