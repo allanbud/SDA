@@ -1,5 +1,4 @@
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 public class PostFix {
 
@@ -7,30 +6,24 @@ public class PostFix {
 
     private static Scanner in = new Scanner(System.in);
 
+
+/***********************************************************************************/
     private static boolean isNumber(String string)  {
-// method checks if string can be parsed to Double
         try{
-// tries to convert string to Double and returns true if success
             Double.parseDouble(string);
             return true;
-// if trows exception catch it and return false because it is not a number
         } catch (NumberFormatException ex){
             return false;
         }
-
     }
-// converts prefix to postfix
-// Main method is made to handle postfix only
-// because it uses stacks
-// this method makes prefix input to be understandble by main method
-// this makes the code shorter and more clear
-// it turns + - 2 3 4 to 2 3 4 - +
+/************************************************************************************/
+
     private static String[] reverseStr(String[] string){
         int i = 0;
         int n = 0;
         int len = string.length - 1;
         String[] dest = new String[len+1];
-//put operators from prefix to postfix
+
         for (int t = 0; t == len; t++){
             dest[t] = string[t];
         }
@@ -49,59 +42,113 @@ public class PostFix {
         return dest;
     }
 
+/******** define an Operation interface which has a single apply method ********/
+    public interface Operation {
+        double apply(double a, double b);
+    }
+
+
+
+/***** The method takes two number as input and returns the result. ********/
+
+    public static class Addition implements Operation {
+     @Override
+        public double apply(double a, double b) {
+            return a + b;
+    }
+}
+
+    public static class Subtraction implements Operation {
+        @Override
+        public double apply(double a, double b) {
+            return a - b;
+        }
+    }
+
+    public static class Multiplication implements Operation {
+        @Override
+        public double apply(double a, double b) {
+            return a * b;
+        }
+    }
+
+    public static class Division implements Operation {
+        @Override
+        public double apply(double a, double b) {
+            try {
+                double div = (a / b);
+                if (div == Double.POSITIVE_INFINITY ||
+                        div == Double.NEGATIVE_INFINITY) {
+                    throw new ArithmeticException();
+                }
+            } catch (ArithmeticException ae) {
+                zero = true;
+                System.out.print(Color.RED_BOLD_BRIGHT);
+                System.out.println("ArithmeticException occured, div by zero!");
+                System.out.print(Color.RESET);
+            }
+            return a / b;
+        }
+    }
+
+/****query the factory to get the relevant operation and apply on the source numbers:*****/
+
+public static double calculateUsingFactory(double a, double b, String operator) {
+    Operation targetOperation = OperatorFactory
+            .getOperation(operator)
+            .orElseThrow(() -> new IllegalArgumentException("Invalid Operator"));
+    return targetOperation.apply(a, b);
+}
+
+
+
+
+
 
     public static void main(String[] args){
 
-
+/*
         System.out.println("post or pref?");
         String menu = in.nextLine();
         if (menu.equals("post")) {
             prefix = true;
         }
 
+ */
+
         System.out.println("please enter what you need to enter");
         String str = in.nextLine();
 
 
-// converts String to array of string with " " separator
         String[] strings = str.split(" ");
-
-// user choose between prefix or postfix
-// this could easily automated by using isNumber method
-// but the goal was to make a menu
-
+/*
         if (!prefix) {
             strings = reverseStr(strings);
         }
 
-// from this point code sees no differents between postfix or prefix
+ */
 
         Stack<Double> stack = new Stack<Double>();
 
-
-
         for (int i = 0; i < strings.length; i++){
 
-//if entered symbol passes isNumber check
-//then convert it to Double and put on top of stack
+
             if (isNumber(strings[i])){
                 stack.push(Double.parseDouble(strings[i]));
             }
             else {
-//if not presume symbol is an operator and start with calculations
-//two numbers are expected to proceed
-//number of operators and numbers should not be equal
-//1 2 + + will result an error 1 2 + will pass
+
                 if (stack.size() >= 2 && strings.length % 2 != 0) {
                     pass = true;
                     double tmp1 = stack.pop();
-// second double takes next from stack (now its first after previos operation)
-// two elements from top of stack converted to two double vars
-
                     double tmp2 = stack.pop();
+                    stack.push(calculateUsingFactory(tmp2, tmp1, strings[i]));
+
+/*
+
 
                     switch (strings[i]) {
-// replace two elements from top of stack with calculation
+
                         case "+":
 
                             stack.push(tmp1 + tmp2);
@@ -109,7 +156,7 @@ public class PostFix {
                             break;
 
                         case "-":
-//tmp2 goes first because it was taken from stack after tmp1
+
                             stack.push(tmp2 - tmp1);
 
                             break;
@@ -119,8 +166,7 @@ public class PostFix {
                             stack.push(tmp1 * tmp2);
 
                             break;
-//in case of long input string div by zero may accure
-//div by zero error handling
+
 
                         case "/":
                             try {
@@ -147,7 +193,9 @@ public class PostFix {
                             i = strings.length;
                         }
 
+
                     }
+*/
                 }
             }
         }
