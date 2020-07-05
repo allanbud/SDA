@@ -89,7 +89,7 @@ public class PostFix {
             }
             else {
 //if not presume symbol is an operator and start with calculations
-//two numbers are aexpected to proceed
+//two numbers are expected to proceed
 //number of operators and numbers should not be equal
 //1 2 + + will result an error 1 2 + will pass
                 if (stack.size() >= 2 && strings.length % 2 != 0) {
