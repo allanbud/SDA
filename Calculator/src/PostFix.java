@@ -26,7 +26,7 @@ public class PostFix {
 
 
 
-/***** The method takes two number as input and returns the result. ********/
+/***** The method takes two numbers as input and returns the result. ********/
 
     public static class Addition implements Operation {
      @Override
@@ -61,7 +61,7 @@ public class PostFix {
             } catch (ArithmeticException ae) {
                 DivByZero = true;
                 System.out.print(Color.RED_BOLD_BRIGHT);
-                System.out.println("ArithmeticException occured, div by DivByZero!");
+                System.out.println("ArithmeticException occured, div by zero!");
                 System.out.print(Color.RESET);
             }
             return a / b;
