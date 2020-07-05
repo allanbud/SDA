@@ -2,7 +2,8 @@ import java.util.*;
 
 public class PostFix {
 
-    private static boolean pass, zero, prefix, wrongOperator;
+    
+    private static boolean doneWithCalculations, DivByZero;
 
     private static Scanner in = new Scanner(System.in);
 
@@ -58,9 +59,9 @@ public class PostFix {
                     throw new ArithmeticException();
                 }
             } catch (ArithmeticException ae) {
-                zero = true;
+                DivByZero = true;
                 System.out.print(Color.RED_BOLD_BRIGHT);
-                System.out.println("ArithmeticException occured, div by zero!");
+                System.out.println("ArithmeticException occured, div by DivByZero!");
                 System.out.print(Color.RESET);
             }
             return a / b;
@@ -72,13 +73,9 @@ public class PostFix {
 public static double calculateUsingFactory(double a, double b, String operator) {
     Operation targetOperation = OperatorFactory
             .getOperation(operator)
-            .orElseThrow(() -> new IllegalArgumentException("Invalid Operator"));
+            .orElseThrow(() -> new IllegalArgumentException(""));
     return targetOperation.apply(a, b);
 }
-
-
-
-
 
 
     public static void main(String[] args){
@@ -102,31 +99,27 @@ public static double calculateUsingFactory(double a, double b, String operator) 
             else {
 
                 if (stack.size() >= 2 && strings.length % 2 != 0) {
-                    pass = true;
+                    doneWithCalculations = true;
                     double b = stack.pop();
                     double a = stack.pop();
-                    stack.push(calculateUsingFactory(a, b, strings[i]));
 
-
-
-                if (wrongOperator){
-                            stack.clear();
-                            i = strings.length;
-
-                }
-
-
-
+                    try {
+                    stack.push(calculateUsingFactory(a, b, strings[i]));}
+                    catch (IllegalArgumentException e) {
+/***** Clearing stack will result displaying error message ***********************/                        
+                        stack.clear();
+                        i = strings.length;
+                    }
                 }
             }
         }
 
 
 // final result can exist only if there is only one element in stack left
-// if no div by zero has accured
+// if no div by DivByZero has accured
 // and if calculation has succesfully passed
 
-        if (stack.size() == 1 && !zero && pass) {
+        if (stack.size() == 1 && !DivByZero && doneWithCalculations) {
 
 
             System.out.print(Color.BLACK);
@@ -136,9 +129,7 @@ public static double calculateUsingFactory(double a, double b, String operator) 
 
         } else {
 
-// if not general error message appears
-// if there was div by zero then before general error message
-// div by zero error will be printed too
+
 // examples of errors:
 // 2 2,5 +
 // 2 2.5+
