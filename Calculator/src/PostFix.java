@@ -133,6 +133,9 @@ public static double calculateUsingFactory(double a, double b, String operator) 
 // examples of errors:
 // 2 2,5 +
 // 2 2.5+
+// 1 2 3 +
+// 1 2 3 + + +
+// 1 2 3 ++
 
 
             System.out.print(Color.RED_BOLD);
