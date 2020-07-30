@@ -1,4 +1,3 @@
-
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -8,16 +7,17 @@ public class Person {
     protected String LastName;
     protected Date DateOfBirth;
 
-    public Person (String FirstName, String LastName, int Year, int Month, int Day){
+
+    public void setFirstName( String FirstName ) {
         this.FirstName = FirstName;
-        this.LastName = LastName;
-        Calendar cal = Calendar.getInstance();
-        cal.set( Year, Month, Day );
-        this.DateOfBirth = cal.getTime();
     }
 
     public String getFirstName() {
         return FirstName;
+    }
+
+    public void setLastName(String LastName) {
+        this.LastName = LastName;
     }
 
     public String getLastName() {
@@ -30,7 +30,7 @@ public class Person {
 
         Calendar today = Calendar.getInstance();
         Calendar PersonName = new GregorianCalendar();
-        PersonName.setTime(DateOfBirth);
+        PersonName.setTime( DateOfBirth );
 
         // Compute basic difference in years ....
 
@@ -48,6 +48,13 @@ public class Person {
         return yearDiff;
     }
 
+
+    public void setDateOfBirth(int Year, int Month, int Day ) {
+        Calendar cal = Calendar.getInstance();
+        cal.set( Year, Month, Day );
+        this.DateOfBirth = cal.getTime();
+    }
+
     public Date getDateOfBirth() {
         return DateOfBirth;
     }
@@ -61,12 +68,14 @@ public class Person {
         return PersonCredentials;
     }
 
-
+/*TODO
     public static void main ( String [] args ) {
-        Person Allan_Budarin = new Person("Allan", "Budarin",1971, Calendar.MARCH, 14 );
-        //Allan_Budarin.setDateOfBirth ( 1971, Calendar.MARCH, 14 );
+        Person Allan_Budarin = new Person();
+        Allan_Budarin.setFirstName("Allan");
+        Allan_Budarin.setLastName("Budarin");
+        Allan_Budarin.setDateOfBirth ( 1971, Calendar.MARCH, 14 );
         System.out.println(Allan_Budarin);
     }
 
-
+ */
 }

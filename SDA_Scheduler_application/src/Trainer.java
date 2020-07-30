@@ -1,6 +1,9 @@
-public class Trainer {
+public class Trainer extends Person{
 
     public boolean isAuthorized;
+
+
+
 
 
 }
