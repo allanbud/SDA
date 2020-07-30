@@ -3,12 +3,12 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class Person {
-    protected String FirstName;
-    protected String LastName;
-    protected Date DateOfBirth;
+    private String FirstName;
+    private String LastName;
+    private Date DateOfBirth;
 
 
-    public void setFirstName( String FirstName ) {
+    public void setFirstName(String FirstName) {
         this.FirstName = FirstName;
     }
 
@@ -59,7 +59,7 @@ public class Person {
         return DateOfBirth;
     }
 
-
+/*TODO
     //Forming a string that includes full credentials
     //The toString() method returns the string representation of the object.
     public String toString() {
@@ -67,8 +67,6 @@ public class Person {
         PersonCredentials += " Age: " + getAge() + "\n";
         return PersonCredentials;
     }
-
-/*TODO
     public static void main ( String [] args ) {
         Person Allan_Budarin = new Person();
         Allan_Budarin.setFirstName("Allan");
