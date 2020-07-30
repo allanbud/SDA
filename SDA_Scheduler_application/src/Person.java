@@ -59,7 +59,7 @@ public class Person {
         return DateOfBirth;
     }
 
-/*TODO
+/*TODO remove this
     //Forming a string that includes full credentials
     //The toString() method returns the string representation of the object.
     public String toString() {

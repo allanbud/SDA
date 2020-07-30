@@ -4,14 +4,7 @@ import java.util.Calendar;
 
 public class Group1{
 
-    static String[] ArrayOfStudents = {"Allan Budarin 1971 3 14",
-            "Cierra Vega 1972 3 14",
-            "Alden Cantrell 1941 4 24",
-            "Kierra Gentry 2071 6 12",
-            "Pierre Cox 1981 2 11",
-            "Thomas Crane 1974 5 04",
-            "Bradyn Kramer 1976 12 24",
-            "Alvaro Mcgee 1979 10 16"};
+    static String[] ArrayOfStudents = ReadFile.result.toArray(new String[0]);
 
     public static List<Person> ListOfStudents = new ArrayList<Person>();
 
@@ -33,7 +26,7 @@ public class Group1{
                                       Integer.parseInt(StudentCredentials[3]),
                                       Integer.parseInt(StudentCredentials[4]));
 
-           student[i].hasPreviousJavaKnowledge = true;
+            student[i].hasPreviousJavaKnowledge = true;
 
             ListOfStudents.add(student[i]);
         }
@@ -43,5 +36,6 @@ public class Group1{
     public static void main(String[] args) {
         System.out.println(ListOfStudents);
     }
+
 
 }
