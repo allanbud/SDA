@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HelloJavaWorldController">
+    <children>
+        <AnchorPane layoutY="100.0" prefHeight="300.0" prefWidth="700.0" style="-fx-background-color: #fafafa; -fx-border-color: silver;">
+            <children>
+                <Label layoutX="222.0" layoutY="39.0" text="Hello Java World!" textFill="#427290">
+                    <font>
+                        <Font name="David CLM Bold" size="36.0" />
+                    </font>
+                </Label>
+            <ImageView fx:id="HelloJavaWorldImage" fitHeight="150.0" fitWidth="200.0" layoutX="276.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/181_Java-512.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+        <Label layoutX="229.0" layoutY="14.0" text="JavaEstonia1" textFill="WHITE">
+            <font>
+                <Font name="David CLM Bold" size="48.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
