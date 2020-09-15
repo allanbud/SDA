@@ -2,6 +2,8 @@ package sample;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import com.sun.xml.internal.bind.v2.TODO;
@@ -13,6 +15,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sample.animations.Shake;
+
+import javax.activation.DataHandler;
+import javax.xml.transform.Result;
 
 public class Controller {
 
@@ -52,23 +58,60 @@ public class Controller {
 
 
         LoginRegisterButton.setOnAction(event -> {
-            LoginRegisterButton.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/register.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
+            openNewWindow("/sample/register.fxml");
         });
 
     }
 
     private void loginUser(String loginText, String loginPassword) {
+        databaseHandler dbHandler = new databaseHandler();
+        User user = new User();
+
+        user.setUserName(loginText);
+        user.setPassword(loginPassword);
+
+        ResultSet result = dbHandler.getUser(user);
+
+        int counter = 0;
+
+        try {
+            while(result.next()) {
+                counter++;
+            }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+
+
+
+
+        if(counter >= 1) {
+            openNewWindow("/sample/app.fxml");
+        }
+        else {
+            Shake userLoginAnimation = new Shake(LoginUserField);
+            Shake userPasswordAnimation = new Shake(LoginPasswordField);
+            userLoginAnimation.playAnimation();
+            userPasswordAnimation.playAnimation();
+        }
     }
+
+   public void openNewWindow(String window){
+       LoginRegisterButton.getScene().getWindow().hide();
+       FXMLLoader loader = new FXMLLoader();
+       loader.setLocation(getClass().getResource(window));
+       try {
+           loader.load();
+       } catch (IOException e) {
+           e.printStackTrace();
+       }
+
+       Parent root = loader.getRoot();
+       Stage stage = new Stage();
+       stage.setScene(new Scene(root));
+       stage.showAndWait();
+
+   }
+
+
 }

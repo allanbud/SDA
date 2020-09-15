@@ -18,6 +18,11 @@ public class User {
         this.gender = gender;
     }
 
+    //empty constructor to avoid error and
+    //to allow create new User() in Controller.java
+    public User() {
+    }
+
     public String getFirstName() {
         return firstName;
     }
