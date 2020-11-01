@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+<head>
+    <title>Article Edit</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+
+
+<div class="container mt-5 mb-5">
+    <h1>Редактирование статьи</h1>
+    <div th:each="el : ${article}">
+        <form method="post">
+            <input type="text" th:value="${el.title}" name="title" required minlength="4" maxlength="50" placeholder="Enter article title (4 to 50 characters)" class="form-control"><br>
+            <input type="text" th:value="${el.anons}" name="anons" required minlength="4" maxlength="250" placeholder="Enter article announcement (4 to 250 characters)" class="form-control"><br>
+            <textarea name="full_text"  placeholder="Enter Article Text" class="form-control" th:text="${el.fullText}"/><br>
+            <button type="submit" class="btn btn-success">Refresh article</button>
+        </form>
+    </div>
+</div>
+
+
+
+<div th:insert="blocks/footer :: footer"></div>
+
+</body>
+</html>
